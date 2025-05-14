@@ -36,7 +36,7 @@ bun install
 bun run src/index.ts
 ```
 
-The API will be available at http://localhost:3000
+The API will be available at <http://localhost:3000>
 
 ## Endpoints
 
@@ -48,3 +48,7 @@ The API will be available at http://localhost:3000
 ---
 
 **Note:** Ensure Postgres is running and the `todos` table is created before starting the API.
+
+## References
+
+- <https://www.prisma.io/fastify>

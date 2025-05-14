@@ -1,0 +1,26 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Start API (Bun)",
+      "type": "shell",
+      "command": "bun run src/index.ts",
+      "group": "build",
+      "problemMatcher": []
+    },
+    {
+      "label": "Start Postgres (Docker Compose)",
+      "type": "shell",
+      "command": "docker compose up -d",
+      "group": "build",
+      "problemMatcher": []
+    },
+    {
+      "label": "Init DB Schema",
+      "type": "shell",
+      "command": "docker exec -i $(docker compose ps -q db) psql -U todo_user -d todo_db < db-init.sql",
+      "group": "build",
+      "problemMatcher": []
+    }
+  ]
+}

@@ -2,7 +2,6 @@ services:
   db:
     image: postgres:17-alpine
     container_name: todo_db
-    restart: never
     pull_policy: if_not_present
     environment:
       POSTGRES_USER: todo_user

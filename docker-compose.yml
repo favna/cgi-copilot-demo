@@ -1,12 +1,14 @@
 services:
   db:
     image: postgres:17-alpine
-    restart: always
+    container_name: todo_db
+    restart: never
+    pull_policy: if_not_present
     environment:
       POSTGRES_USER: todo_user
       POSTGRES_PASSWORD: todo_pass
       POSTGRES_DB: todo_db
     ports:
-      - "5432:5432"
+      - 5432:5432
     volumes:
       - ./db-init.sql:/docker-entrypoint-initdb.d/db-init.sql:ro

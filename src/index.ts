@@ -5,7 +5,7 @@ import fastifyPostgress from "@fastify/postgres";
 const fastify = Fastify({ logger: true });
 
 fastify.register(fastifyPostgress, {
-  connectionString: "postgres://todo_user:todo_pass@localhost:5432/todo_db",
+  connectionString: "postgres://user:pass@localhost:5432/todo_db",
 });
 
 fastify.get("/todos", async () => {

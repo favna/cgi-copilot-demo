@@ -2,7 +2,7 @@
   "extends": ["@sapphire/ts-config", "@sapphire/ts-config/verbatim"],
   "compilerOptions": {
     "outDir": "dist",
-    "rootDir": "src"
+    "types": ["bun-types", "@types/node"]
   },
-  "include": ["src"]
+  "include": ["src", "test"]
 }

@@ -38,6 +38,43 @@ bun run src/index.ts
 
 The API will be available at <http://localhost:3000>
 
+## Testing
+
+This project includes comprehensive tests using Bun's built-in test runner with mocked database connections.
+
+### Running Tests
+
+```sh
+# Run all tests
+bun test
+
+# Run tests in watch mode
+bun test --watch
+
+# Run specific test file
+bun test test/app.test.ts
+```
+
+### Test Features
+
+- **Unit Tests** - Individual API endpoint testing
+- **Integration Tests** - Complete CRUD workflow testing
+- **Database Mocking** - No real database required for tests
+- **Error Handling** - Database failure and edge case testing
+- **18 tests total** covering all endpoints and scenarios
+
+See [test/README.md](test/README.md) for detailed testing documentation.
+
+## VS Code Tasks
+
+This project includes VS Code tasks for common operations:
+
+- **Start API (Bun)** - `Ctrl+Shift+P` → "Tasks: Run Task" → "Start API (Bun)"
+- **Start Postgres (Docker Compose)** - Start the database
+- **Init DB Schema** - Initialize the database schema
+- **Run Tests** - Execute the test suite
+- **Run Tests (Watch)** - Run tests in watch mode
+
 ## Endpoints
 
 - `GET /todos` - List all TODOs

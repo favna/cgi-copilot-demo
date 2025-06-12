@@ -21,6 +21,21 @@
       "command": "docker exec -i $(docker compose ps -q db) psql -U todo_user -d todo_db < db-init.sql",
       "group": "build",
       "problemMatcher": []
+    },
+    {
+      "label": "Run Tests",
+      "type": "shell",
+      "command": "bun test",
+      "group": "test",
+      "problemMatcher": []
+    },
+    {
+      "label": "Run Tests (Watch)",
+      "type": "shell",
+      "command": "bun test --watch",
+      "group": "test",
+      "isBackground": true,
+      "problemMatcher": []
     }
   ]
 }

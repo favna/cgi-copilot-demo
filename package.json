@@ -13,6 +13,6 @@
     "pg": "^8.16.0"
   },
   "devDependencies": {
-    "@sapphire/ts-config": "^5.0.1"
+    "@sapphire/ts-config": "^6.0.0"
   }
 }
